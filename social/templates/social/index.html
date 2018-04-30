@@ -1,0 +1,4 @@
+<h1>{{title}}</h1><a href="{% url 'create'%}">add new title</a>
+{% for post in posts%}
+<div>{{post.title}}</div><a href="{% url 'delete' post.title %}">delete</a>
+{% endfor%}
