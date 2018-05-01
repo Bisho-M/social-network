@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'dsproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'social',
+        'NAME': 'socialNetwork',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',

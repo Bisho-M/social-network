@@ -1,4 +1,28 @@
-<h1>{{title}}</h1><a href="{% url 'create'%}">add new title</a>
-{% for post in posts%}
-<div>{{post.title}}</div><a href="{% url 'delete' post.title %}">delete</a>
-{% endfor%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div><h1>SignUp</h1>
+        <form method="post" action="{% url 'signup'%}">
+                {% csrf_token %} 
+            <div><label for="in_name">Name</label> <input type="text" name="name" id="in_name"/></div>
+            <div><label for="in_email">E-mail</label> <input type="email" name="email" id="in_email"/></div>
+            <div><label for="in_pass">Password</label> <input type="password" name="pass" id="in_pass"/></div>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <div><h1>Login</h1>
+        <form method="post" action="{% url 'index' %}">
+                {% csrf_token %} 
+                <div><label for="in_name">Name</label> <input type="text" name="name" id="in_name"/></div>
+            <div><label for="in_pass">Password</label> <input type="password" name="pass" id="in_pass"/></div>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+</body>
+</html>
